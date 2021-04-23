@@ -17,7 +17,7 @@ displayBlock="true">
     
 				</Page> -->
 
-                   <Page  title="Demo GUI Launch GIT git pull origin master" xmlns="sap.m" 
+                   <Page  title="Demo GUI Launch GIT origin tw" xmlns="sap.m" 
                    id="information"  showNavButton="true" showHeader="true" 
                    backgroundDesign="Standard" navButtonPress="onBack">
 		<content>
