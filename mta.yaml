@@ -1,0 +1,59 @@
+_schema-version: "3.2"
+ID: twisu
+version: 0.0.1
+modules:
+- name: twisu-approuter
+  type: approuter.nodejs
+  path: twisu-approuter
+  requires:
+  - name: twisu_html_repo_runtime
+  - name: aoc
+  parameters:
+    disk-quota: 256M
+    memory: 256M
+- name: twisu_ui_deployer
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: twisu_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - UI5Module-content.zip
+      name: UI5Module
+      target-path: resources/
+- name: UI5Module
+  type: html5
+  path: UI5Module
+  build-parameters:
+    builder: custom
+    commands:
+    - npm run build
+    supported-platforms: []
+resources:
+- name: twisu_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+- name: twisu_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+- name: aoc
+  type: org.cloudfoundry.existing-service
+  parameters:
+    protocol:
+    - ODataV2
+    service: abap-trial
+    service-name: AOC
+    service-plan: shared
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    - npm install

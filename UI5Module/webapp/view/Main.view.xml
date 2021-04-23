@@ -1,0 +1,44 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+xmlns:u="sap.ui.unified" 
+xmlns="sap.m" 
+xmlns:form="sap.ui.layout.form" 
+xmlns:core="sap.ui.core" 
+xmlns:html="http://www.w3.org/1999/xhtml"
+controllerName="twm.UI5Module.controller.Main" 
+displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<!-- <Page id="page" title="{i18n>title}">
+				<content>
+				  <Input id="idinput" editable="true"/>
+
+				  </content> 
+    
+				</Page> -->
+
+                   <Page  title="Demo GUI Launch" xmlns="sap.m" 
+                   id="information"  showNavButton="true" showHeader="true" 
+                   backgroundDesign="Standard" navButtonPress="onBack">
+		<content>
+        <Toolbar >
+        <Button press="onPress" text="Launch Free Demo Server"> </Button>
+        
+        <Button press="onPress2" text="LaunchISb BDEx"> </Button>
+        <Button press="onPress3" text="Launch ISB HTTPS"> </Button>
+        </Toolbar>
+			<HTML xmlns="sap.ui.core" id="html" content=""/>
+            
+<!-- <html:iframe   src="http://www.w3schools.com" id ="idIFrame" height="100%" width="100%" allowfullscreen="true">
+
+</html:iframe> -->
+  <!-- <mvc:XMLView viewName="twm.UI5Module.view.embed"/> -->
+		</content>
+	</Page>
+			</pages>
+	
+		</App>
+	</Shell> 
+
+
+</mvc:View>

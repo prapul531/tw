@@ -1,0 +1,18 @@
+/mta_archives/
+/node_modules/
+/resources/
+
+# auto generated wildcard
+UI5Module/.env1
+# auto generated wildcard
+twisu/UI5Module/.env2
+# auto generated wildcard
+zdemo_tw/HTML5Module/.env2
+# auto generated wildcard
+zroletest/ZROLEHTML5Module/.env2
+# auto generated wildcard
+guitest/GUIModule/.env1
+# auto generated wildcard
+worklist/WorklistModule/.env1
+# auto generated wildcard
+worklist/WorklistModule/.env2
