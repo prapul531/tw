@@ -22,7 +22,7 @@ displayBlock="true">
                    backgroundDesign="Standard" navButtonPress="onBack">
 		<content>
         <Toolbar >
-        <Button press="onPress" text="Launch Free Demo Server"> </Button>
+        <Button press="onPress" text="Launch Free Demo Server updated"> </Button>
         
         <Button press="onPress2" text="LaunchISb BDEx"> </Button>
         <Button press="onPress3" text="Launch ISB HTTPS"> </Button>
