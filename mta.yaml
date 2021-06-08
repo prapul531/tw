@@ -1,6 +1,6 @@
 _schema-version: "3.2"
 ID: twisu
-version: 0.0.1
+version: 0.0.2
 modules:
 - name: twisu-approuter
   type: approuter.nodejs
